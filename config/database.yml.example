@@ -1,0 +1,19 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username:
+  password:
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  database: cable_chat_development
+
+test:
+  <<: *default
+  database: cable_chat_test
+
+production:
+  <<: *default
+  database: cable_chat_production

@@ -1,0 +1,10 @@
+<h1>Add chat room</h1>
+
+<%= form_for @chat_room do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+
+  <%= f.submit "Create chat room", class: 'btn btn-primary' %>
+<% end %>
